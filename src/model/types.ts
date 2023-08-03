@@ -1,4 +1,3 @@
-// TODO: чекнуть норм ли без пустых массивов
 export interface Character {
   birth_year: string;
   eye_color: string;
