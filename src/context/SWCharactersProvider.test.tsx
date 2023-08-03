@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
+
 import { SWCharactersContext } from "@/context/SWCharactersProvider";
 import App from "@/App";
 
