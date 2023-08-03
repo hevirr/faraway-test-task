@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 
 export const ErrorPage = () => {
   const error = useRouteError();
-  console.log(error);
+  console.error(error);
 
   return (
     <Box

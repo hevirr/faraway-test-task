@@ -1,0 +1,1 @@
+export { fetchCompleteDataForCharacter } from "./fetchCompleteDataForCharacter";

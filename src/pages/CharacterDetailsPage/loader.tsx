@@ -29,7 +29,7 @@ export const loader =
       character = await fetchSingleCharacterById(params.characterId);
     }
 
-    character = await fetchCompleteDataForCharacter(character);
+    character = await fetchCompleteDataForCharacter(character, fetch);
 
     return { character };
   }) satisfies LoaderFunction;

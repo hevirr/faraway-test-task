@@ -1,7 +1,10 @@
 import { propertiesToFetch } from "@/model/constant";
 import { Character } from "@/model/types";
 
-export const fetchCompleteDataForCharacter = async (character: Character) => {
+export const fetchCompleteDataForCharacter = async (
+  character: Character,
+  fetchClient: (arg: string) => Promise<Response>
+) => {
   const objectWithFetchingProps = Object.keys(character)
     .filter((key) => propertiesToFetch.includes(key))
     .reduce((acc, key) => {
@@ -16,8 +19,8 @@ export const fetchCompleteDataForCharacter = async (character: Character) => {
 
   return await Promise.all(
     flattedProperties.map(async (url) => {
-      const response = await fetch(url);
-      return response.json();
+      const response = await fetchClient(url);
+      return await response.json();
     })
   ).then((res) => {
     const arrayOfValues = res.map(

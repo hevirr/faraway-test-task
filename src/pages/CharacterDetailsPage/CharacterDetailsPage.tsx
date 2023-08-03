@@ -1,10 +1,10 @@
 import { useLoaderData } from "react-router-dom";
-import { Character } from "@/model/types";
 import { Box } from "@mui/material";
+
 import { filterCharacterByImportantProperties } from "@/shared/ui/CharacterListItem/lib/filterCharacterByImportantProperties";
 import { EditablePropValuePair } from "@/shared/ui/CharacterListItem/ui/EditablePropValuePair/EditablePropValuePair";
-
-const unwantedProperties = ["created", "edited", "url"];
+import type { Character } from "@/model/types";
+import { unwantedProperties } from "./model/constant";
 
 export const CharacterDetailsPage = () => {
   const { character } = useLoaderData() as { character: Character };

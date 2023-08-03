@@ -10,7 +10,7 @@ export interface Character {
   name: string;
   skin_color: string;
   species: string[];
-  starsips: string[];
+  starships: string[];
   vehicles: string[];
   created: string;
   edited: string;

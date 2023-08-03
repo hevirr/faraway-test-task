@@ -16,6 +16,7 @@ export const EmptyListPlaceholder = () => {
         border: "5px solid #000000",
         borderRadius: "70px",
       }}
+      data-testid="empty-list-placeholder"
     >
       Nothing found
     </Box>
