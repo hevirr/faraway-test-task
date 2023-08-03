@@ -1,18 +1,18 @@
 import { useRef, KeyboardEvent } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Box, FilledInputProps, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 import { useFetchCharacters } from "@/context/hooks/useFetchCharacters";
 
 export const Header = () => {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const navigate = useNavigate();
   const inputRef = useRef<HTMLInputElement | null>(null);
   const { fetchCharacters } = useFetchCharacters();
 
   const handleSearchCharacterByName = () => {
-    if (location.pathname !== "/") navigate("/");
+    if (pathname !== "/") navigate("/");
 
     if (inputRef.current) {
       const searchValue = inputRef.current.value;
@@ -34,8 +34,23 @@ export const Header = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        position: "relative",
       }}
     >
+      {pathname != "/" && (
+        <Box
+          to="/"
+          component={Link}
+          sx={{
+            position: "absolute",
+            top: "45%",
+            left: "25px",
+            color: "#f8f8f8",
+          }}
+        >
+          <span style={{ height: "24px" }}>Back to main page</span>
+        </Box>
+      )}
       <TextField
         placeholder="Enter character name"
         inputRef={inputRef}

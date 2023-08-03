@@ -1,8 +1,9 @@
+import { LoaderFunction } from 'react-router-dom';
+
 import { extractCharacterIdFromUrl } from "@/shared/lib/extractCharacterIdFromUrl";
+import {fetchCompleteDataForCharacter} from "@/shared/lib/fetchCompleteDataForCharacter";
 import { fetchStarWarsCharactersByParams } from "@/api/api";
 import { Character} from "@/model/types";
-import { LoaderFunction } from 'react-router-dom';
-import {fetchCompleteDataForCharacter} from "@/shared/lib/fetchCompleteDataForCharacter";
 
 const fetchSingleCharacterById = async (id: string | undefined) => {
     try {
