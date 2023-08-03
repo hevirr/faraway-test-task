@@ -4,7 +4,6 @@ import ReactDOM from "react-dom/client";
 import { SWCharactersContextProvider } from "@/context/SWCharactersProvider";
 import "@/styles/reset.css";
 import "@/styles/global.css";
-import "@/styles/fonts/DistantGalaxy/SfDistantcGalaxy.ttf";
 
 import App from "./App";
 

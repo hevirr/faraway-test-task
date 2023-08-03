@@ -1,6 +1,6 @@
 @font-face {
     font-family: "DistantGalaxy";
-    src: local("DistantGalaxy"), url("./fonts/DistantGalaxy/SfDistantGalaxy.ttf") format("truetype");
+    src: local("DistantGalaxy"), url("/fonts/DistantGalaxy/SfDistantGalaxy.ttf") format("truetype");
     font-weight: normal;
 }
 
