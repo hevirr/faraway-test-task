@@ -1,3 +1,5 @@
+Deployed on surge.sh - https://unadvised-government.surge.sh/character/1
+
 Test task for React engineer (admin panel & tools)
 Используя Star Wars API (https://swapi.dev/) в качестве источника данных, реализовать SPA приложение React и Typescript, состоящее из двух страниц.
 На главной странице отобразить список или карточки персонажей, к списку добавить возможность пагинации и поиска с использованием API.
