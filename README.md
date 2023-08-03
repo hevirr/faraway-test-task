@@ -1,4 +1,4 @@
-Deployed on surge.sh - https://unadvised-government.surge.sh
+Deployed on surge.sh - aback-brake.surge.sh
 
 Test task for React engineer (admin panel & tools)
 Используя Star Wars API (https://swapi.dev/) в качестве источника данных, реализовать SPA приложение React и Typescript, состоящее из двух страниц.
